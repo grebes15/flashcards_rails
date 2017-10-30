@@ -1,0 +1,14 @@
+<h1> Listing All Decks </h1>
+
+  <table>
+    <tr>
+      <th>Title<th>
+    </tr>
+
+    <% @decks.each do |deck| %>
+      <tr>
+        <td><%= deck.title %></td>
+        <td><%= link_to 'Show', deck_path(deck) %></td>
+      </tr>
+    <% end %>
+  </table>
